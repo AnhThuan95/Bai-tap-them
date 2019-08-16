@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tien TAXI</title>
+</head>
+<body>
+
+<script>
+    function tinhCuoc(kilometers) {
+        let price = 0;
+        if (kilometers == 1) {
+            price = 5000;
+        } else if (kilometers <= 31) {
+            price = 5000 + 4000 * (kilometers - 1);
+        } else {
+            price = 125000 + 3000 * (kilometers - 31);
+        }
+        return price;
+    }
+
+    let distance = parseInt(prompt("Quang duong di chuyen: "));
+    let result = tinhCuoc(distance);
+    alert("So tien phai tra: " + result + " dong");
+</script>
+
+</body>
+</html>

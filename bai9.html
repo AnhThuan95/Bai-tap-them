@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim so le lon nhat</title>
+</head>
+<body>
+
+<script>
+    function getOddNumber(array) {
+        let array1 = [];
+        for (let i = 0; i < array.length; i++ ) {
+            let str = array[i].toString();
+            for (let j = 0; j < str.length; j++) {
+                if (str[j] % 2 == 0) {
+                    break;
+                }
+                if (j == str.length - 1) {
+                    array1.push(array[i]);
+                }
+            }
+        }
+        let result = maxArray(array1);
+        return result;
+    }
+    function maxArray(array) {
+        let max = array[0];
+        for (let i = 0; i <array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+            }
+        }
+        return max;
+    }
+
+    let arr = [135, 255, 695, 759, 699, 111];
+    let result = getOddNumber(arr);
+    alert(result);
+</script>
+
+</body>
+</html>

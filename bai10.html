@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tinh tong cac so o vi tri chan</title>
+</head>
+<body>
+
+<script>
+    function sumEvenPosition(array) {
+        let sum = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (i % 2 == 0) {
+                sum += array[i];
+            }
+        }
+        return sum;
+    }
+
+    let arr = [1,5,6,5,2,4,6,6,5,8,9,4,2,0];
+    result = sumEvenPosition(arr);
+    alert(result);
+</script>
+
+</body>
+</html>

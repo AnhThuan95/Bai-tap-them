@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fibonacci</title>
+</head>
+<body>
+
+<script>
+    function fibonacci(num) {
+        let arrFibonacci = [1];
+        let f1 = 0;
+        let f2 = 0;
+        let f = 1;
+        while (f < num) {
+            f1 = f2;
+            f2 = f;
+            f = f1 + f2;
+            arrFibonacci.push(f);
+
+        }
+        if (f >= num) {
+            arrFibonacci.pop();
+        }
+        return arrFibonacci;
+    }
+
+    let N = parseInt(prompt("Nhap vao gioi han: "));
+    let result = fibonacci(N);
+    alert(result);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tim phan tu xuat hien nhieu</title>
+</head>
+<body>
+
+<script>
+    function browserArray(array) {
+        let arrayA = new Array(2);
+        for (let i = 0; i < 2; i++) {
+            arrayA[i] = new Array();
+        }
+        let m = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] == -1) {
+                continue;
+            } else {
+                arrayA[0][m] = array[i];
+                arrayA[1][m] = 0;
+                for (let j = i; j < array.length; j++) {
+                    if (array[j] == arrayA[0][m]) {
+                        arrayA[1][m] += 1;
+                        array[j] = -1;
+                    }
+                }
+                m++;
+            }
+        }
+        let indexMax = maxArray(arrayA[1]);
+        alert("Phan tu " + arrayA[0][indexMax] + " xuat hien nhieu nhat voi " + arrayA[1][indexMax] + " lan.");
+    }
+
+    function maxArray(array) {
+        let max = array[0];
+        let index = 0;
+        for (let i = 0; i < array.length; i++) {
+            if (max < array[i]) {
+                max = array[i];
+                index = i;
+            }
+        }
+        return index;
+    }
+
+    let arr = [1, 5, 7, 3, 4, 5, 2, 1, 5, 2, 2, 2];
+    browserArray(arr);
+</script>
+
+</body>
+</html>

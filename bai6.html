@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tach mang</title>
+</head>
+<body>
+
+<script>
+    function cutArray(array) {
+        let arrEven = [];
+        let arrOdd = [];
+        for (let i = 0; i < array.length; i++) {
+            if (array[i] % 2 == 0) {
+                arrEven.push(array[i]);
+            } else {
+                arrOdd.push(array[i]);
+            }
+        }
+        alert("arrEven: " + arrEven);
+        alert("arrOdd: " + arrOdd);
+    }
+
+    let arrayA = [1,5,6,2,5,4,6,7,3,2,8,9,22,6];
+    cutArray(arrayA);
+</script>
+
+</body>
+</html>
